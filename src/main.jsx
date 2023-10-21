@@ -5,6 +5,7 @@ import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { CssBaseline } from "@mui/material";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
+import "swiper/css";
 import "@fontsource/lexend/500.css";
 import "@fontsource/roboto/300.css";
 import "@fontsource/roboto/400.css";

@@ -1,5 +1,6 @@
 import Banner from "./components/Banner";
 import OutstandingRealEstateProject from "./components/OutstandingRealEstateProject";
+import RealEstateByLocation from "./components/RealEstateByLocation";
 import RealEstateForYou from "./components/RealEstateForYou";
 
 const Home = () => {
@@ -8,6 +9,7 @@ const Home = () => {
       <Banner />
       <RealEstateForYou />
       <OutstandingRealEstateProject />
+      <RealEstateByLocation />
     </div>
   );
 };
