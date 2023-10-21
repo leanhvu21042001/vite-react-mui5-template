@@ -44,59 +44,59 @@ const Footer = () => {
             </a>
             <Stack flex="1" direction="row" alignItems="center" gap={2}>
               <PhoneInTalkOutlined sx={{ width: 32, height: 32 }} />
-              <Typography>
-                <p style={{ margin: 0, fontSize: 12 }}>
+              <Box>
+                <Typography style={{ margin: 0, fontSize: 12 }}>
                   <a
                     style={{ textDecoration: "none", color: "#000" }}
                     href="tel:19001881"
                   >
                     Hotline
                   </a>
-                </p>
-                <p style={{ margin: 0, fontSize: 14 }}>
+                </Typography>
+                <Typography style={{ margin: 0, fontSize: 14 }}>
                   <a
                     style={{ textDecoration: "none", color: "#000" }}
                     href="tel:19001881"
                   >
                     1900 1881
                   </a>
-                </p>
-              </Typography>
+                </Typography>
+              </Box>
             </Stack>
 
             <Stack flex="1" direction="row" alignItems="center" gap={2}>
               <PermIdentityIcon sx={{ width: 32, height: 32 }} />
-              <Typography>
-                <p style={{ margin: 0, fontSize: 12 }}>
+              <Box>
+                <Typography style={{ margin: 0, fontSize: 12 }}>
                   <a
                     style={{ textDecoration: "none", color: "#000" }}
                     href="mailto:trogiup.batdongsan.com.vn"
                   >
                     Hỗ trợ khách hàng
                   </a>
-                </p>
-                <p style={{ margin: 0, fontSize: 14 }}>
+                </Typography>
+                <Typography style={{ margin: 0, fontSize: 14 }}>
                   <a
                     style={{ textDecoration: "none", color: "#000" }}
                     href="mailto:trogiup.batdongsan.com.vn"
                   >
                     trogiup.batdongsan.com.vn
                   </a>
-                </p>
-              </Typography>
+                </Typography>
+              </Box>
             </Stack>
 
             <Stack flex="1" direction="row" alignItems="center" gap={2}>
               <HeadsetOutlined sx={{ width: 32, height: 32 }} />
-              <Typography>
-                <p style={{ margin: 0, fontSize: 12 }}>
+              <Box>
+                <Typography style={{ margin: 0, fontSize: 12 }}>
                   <a
                     style={{ textDecoration: "none", color: "#000" }}
                     href="mailto:hotro@batdongsan.com.vn"
                   >
                     Chăm sóc khách hàng
                   </a>
-                </p>
+                </Typography>
                 <p style={{ margin: 0, fontSize: 14 }}>
                   <a
                     style={{ textDecoration: "none", color: "#000" }}
@@ -105,7 +105,7 @@ const Footer = () => {
                     hotro@batdongsan.com.vn
                   </a>
                 </p>
-              </Typography>
+              </Box>
             </Stack>
           </Stack>
 

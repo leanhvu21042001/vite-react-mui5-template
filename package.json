@@ -15,6 +15,7 @@
     "@fontsource/lexend": "^5.0.16",
     "@fontsource/roboto": "^5.0.8",
     "@mui/icons-material": "^5.14.14",
+    "@mui/lab": "^5.0.0-alpha.149",
     "@mui/material": "^5.14.14",
     "@mui/styles": "^5.14.14",
     "@uidotdev/usehooks": "^2.4.0",

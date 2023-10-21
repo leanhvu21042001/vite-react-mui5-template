@@ -84,6 +84,7 @@ const Header = () => {
         }
         ref={headerRef}
         position="fixed"
+        zIndex={100}
         backgroundColor="#fff"
         width="100%"
       >
