@@ -78,6 +78,14 @@ const RealEstateByLocation = () => {
   return (
     <Box style={{ backgroundColor: "#FAFAFA", padding: "40px 0" }}>
       <Container maxWidth="lg">
+        <Typography
+          fontSize="24px"
+          fontWeight="bold"
+          variant="h2"
+          padding="20px 0"
+        >
+          Bất động sản theo địa điểm
+        </Typography>
         <Grid container xs={12} spacing={4}>
           <Grid item xs={6}>
             <PlaceItem />
