@@ -2,6 +2,7 @@ import Banner from "./components/Banner";
 import OutstandingRealEstateProject from "./components/OutstandingRealEstateProject";
 import RealEstateByLocation from "./components/RealEstateByLocation";
 import RealEstateForYou from "./components/RealEstateForYou";
+import RealEstateNews from "./components/RealEstateNews";
 
 const Home = () => {
   return (
@@ -10,6 +11,7 @@ const Home = () => {
       <RealEstateForYou />
       <OutstandingRealEstateProject />
       <RealEstateByLocation />
+      <RealEstateNews />
     </div>
   );
 };
