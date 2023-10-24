@@ -39,6 +39,7 @@ const DropdownMenuItem = ({
 }) => {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
+
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
@@ -57,7 +58,6 @@ const DropdownMenuItem = ({
         aria-controls={open ? "basic-menu" : undefined}
         aria-haspopup="true"
         aria-expanded={open ? "true" : undefined}
-        onClick={handleClick}
         style={{
           fontWeight: "normal",
           fontFamily: "'Lexend', Roboto, Arial",

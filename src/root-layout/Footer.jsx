@@ -19,6 +19,7 @@ import {
   Stack,
   Typography,
 } from "@mui/material";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -26,14 +27,14 @@ const Footer = () => {
       <Container maxWidth="lg" display="flex">
         <Stack direction="column" gap={3}>
           <Stack direction="row" justifyContent="space-between" gap={2}>
-            <a
+            <Link
               style={{
                 textDecoration: "none",
                 color: "#000",
                 flex: 1,
                 minWidth: 400,
               }}
-              href="https://batdongsan.com.vn"
+              to="/"
             >
               <img
                 height={60}
@@ -41,7 +42,7 @@ const Footer = () => {
                 alt="Website số 1 về bất động sản"
                 title="Batdongsan.com.vn"
               />
-            </a>
+            </Link>
             <Stack flex="1" direction="row" alignItems="center" gap={2}>
               <PhoneInTalkOutlined sx={{ width: 32, height: 32 }} />
               <Box>
