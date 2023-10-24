@@ -3,11 +3,12 @@ import { Outlet } from "react-router-dom";
 
 import Footer from "./Footer";
 import Header from "./Header";
+import { Box } from "@mui/material";
 
 const RootLayout = () => {
   return (
     <React.Fragment>
-      <div id="root-layout">
+      <Box id="root-layout" position="relative">
         <header id="root-layout-header">
           <Header />
         </header>
@@ -17,7 +18,7 @@ const RootLayout = () => {
         <footer id="root-layout-footer">
           <Footer />
         </footer>
-      </div>
+      </Box>
     </React.Fragment>
   );
 };

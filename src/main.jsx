@@ -6,7 +6,7 @@ import { CssBaseline } from "@mui/material";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import "swiper/css";
-import 'swiper/css/navigation';
+import "swiper/css/navigation";
 
 import "@fontsource/lexend/500.css";
 import "@fontsource/roboto/300.css";
@@ -17,7 +17,9 @@ import "@fontsource/roboto/700.css";
 import RootLayout from "./root-layout/RootLayout.jsx";
 import ErrorPage from "./error-page.jsx";
 import Home from "./pages/Home/Home.jsx";
-import RealEstate from "./pages/RealEstate/RealEstate.jsx";
+import RealEstateForSale from "./pages/RealEstate/Sale/Sale.jsx";
+import RealEstateForRent from "./pages/RealEstate/Rent/Rent.jsx";
+import RealEstateProjects from "./pages/RealEstateProjects/RealEstateProjects.jsx";
 
 const router = createBrowserRouter([
   {
@@ -30,8 +32,16 @@ const router = createBrowserRouter([
         path: "/",
       },
       {
-        path: "/:slug",
-        element: <RealEstate />,
+        path: "sale/:slug",
+        element: <RealEstateForSale />,
+      },
+      {
+        path: "rent/:slug",
+        element: <RealEstateForRent />,
+      },
+      {
+        path: "project/:slug",
+        element: <RealEstateProjects />,
       },
     ],
   },

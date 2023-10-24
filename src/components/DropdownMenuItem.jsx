@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 
 import { styled } from "@mui/material/styles";
 import { Button, Menu, MenuItem } from "@mui/material";
+import { Link } from "react-router-dom";
 
 const BlackOnWhiteButton = styled(Button)(() => ({
   color: "black",
@@ -30,7 +31,12 @@ const BlackOnWhiteButton = styled(Button)(() => ({
   },
 }));
 
-const DropdownMenuItem = ({ text = "DropdownMenuItem", items = [] }) => {
+const DropdownMenuItem = ({
+  text = "DropdownMenuItem",
+  link = "/",
+  items = [],
+  headerHeight = 90,
+}) => {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
@@ -43,6 +49,10 @@ const DropdownMenuItem = ({ text = "DropdownMenuItem", items = [] }) => {
   return (
     <div>
       <BlackOnWhiteButton
+        onMouseEnter={handleClick}
+        onMouseLeave={handleClose}
+        component={Link}
+        to={link}
         disableRipple
         aria-controls={open ? "basic-menu" : undefined}
         aria-haspopup="true"
@@ -58,28 +68,50 @@ const DropdownMenuItem = ({ text = "DropdownMenuItem", items = [] }) => {
         }}
       >
         {text}
+        <Menu
+          id="basic-menu"
+          anchorEl={anchorEl}
+          open={open}
+          onClose={handleClose}
+          MenuListProps={{
+            "aria-labelledby": "basic-button",
+            onMouseLeave: handleClose,
+          }}
+          style={{
+            top: headerHeight,
+          }}
+          sx={{
+            ".MuiBackdrop-root.MuiBackdrop-invisible.MuiModal-backdrop": {
+              top: headerHeight,
+              display: "none",
+            },
+            ".MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation8.MuiMenu-paper.MuiPopover-paper.MuiMenu-paper":
+              {
+                top: "0px !important",
+                zIndex: "1301 !important",
+              },
+          }}
+        >
+          {items.map((item, index) => (
+            <MenuItem
+              component={Link}
+              to={item.link}
+              key={`${item}-${index}`}
+              onClick={handleClose}
+            >
+              {item.text}
+            </MenuItem>
+          ))}
+        </Menu>
       </BlackOnWhiteButton>
-      <Menu
-        id="basic-menu"
-        anchorEl={anchorEl}
-        open={open}
-        onClose={handleClose}
-        MenuListProps={{
-          "aria-labelledby": "basic-button",
-        }}
-      >
-        {items.map((item, index) => (
-          <MenuItem key={`${item}-${index}`} onClick={handleClose}>
-            {item}
-          </MenuItem>
-        ))}
-      </Menu>
     </div>
   );
 };
 
 DropdownMenuItem.propTypes = {
   text: PropTypes.string,
+  link: PropTypes.string,
+  headerHeight: PropTypes.number,
   items: PropTypes.array,
 };
 
