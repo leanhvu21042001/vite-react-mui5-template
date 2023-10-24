@@ -9,6 +9,7 @@ import {
 import RealEstateSearchBox from "../components/RealEstateSearchBox";
 import { Link, useLocation, useParams } from "react-router-dom";
 import RealEstateCard from "../components/RealEstateCard";
+import FilterSidebar from "../components/FilterSidebar";
 const RealEstateForRent = () => {
   const { pathname } = useLocation();
   const { slug } = useParams();
@@ -70,7 +71,7 @@ const RealEstateForRent = () => {
             </Stack>
           </Grid>
           <Grid item xs={3}>
-            <h2>Xin chao</h2>
+            <FilterSidebar variant="rent" />
           </Grid>
         </Grid>
       </Container>
