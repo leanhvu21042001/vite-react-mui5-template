@@ -16,7 +16,7 @@ const RealEstateForRent = () => {
 
   return (
     <div id="RealEstateForRent-page">
-      <RealEstateSearchBox />
+      <RealEstateSearchBox searchType="rent" />
       <Container maxWidth="lg">
         <Breadcrumbs sx={{ marginTop: 3 }} aria-label="breadcrumb">
           <Link

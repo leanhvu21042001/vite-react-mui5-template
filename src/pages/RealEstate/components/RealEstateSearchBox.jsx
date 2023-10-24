@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import {
   Box,
   Divider,
@@ -15,11 +16,10 @@ import SelectTypeOfAreaAndProject from "./SelectTypeOfAreaAndProject";
 import RangePrice from "./RangePrice";
 import RangeArea from "./RangeArea";
 
-const RealEstateSearchBox = () => {
+const RealEstateSearchBox = ({ searchType }) => {
   const [paddingTop, setPaddingTop] = React.useState(100);
 
   const searchBoxRef = React.useRef(null);
-  const searchType = "sale"; // sale | rent
 
   React.useLayoutEffect(() => {
     setPaddingTop(searchBoxRef.current?.clientHeight);
@@ -173,4 +173,7 @@ const RealEstateSearchBox = () => {
   );
 };
 
+RealEstateSearchBox.propTypes = {
+  searchType: PropTypes.string,
+};
 export default RealEstateSearchBox;
