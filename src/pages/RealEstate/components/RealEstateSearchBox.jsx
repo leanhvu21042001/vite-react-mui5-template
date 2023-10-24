@@ -30,6 +30,7 @@ const RealEstateSearchBox = () => {
       <Box
         ref={searchBoxRef}
         position="fixed"
+        zIndex={100}
         style={{ backgroundColor: "#fff", width: "100%" }}
         boxShadow="0px 4px 10px rgba(182,182,182,0.18)"
       >
