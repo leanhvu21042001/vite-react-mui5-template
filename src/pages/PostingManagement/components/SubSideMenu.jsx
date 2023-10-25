@@ -10,6 +10,7 @@ import {
   ListItemText,
   Stack,
 } from "@mui/material";
+import { Link } from "react-router-dom";
 
 export default function SubSideMenu({ text, items, open }) {
   const [expanded, setExpanded] = React.useState(false);
@@ -54,8 +55,10 @@ export default function SubSideMenu({ text, items, open }) {
       {expanded && items && (
         <Stack direction="column">
           {items.map((item) => (
-            <Box key={item}>
+            <Box key={item.text}>
               <ListItemButton
+                component={Link}
+                to={item.link}
                 sx={{
                   minHeight: 48,
                   justifyContent: open ? "initial" : "center",
@@ -73,7 +76,10 @@ export default function SubSideMenu({ text, items, open }) {
                   {/* <ListIcon /> */}
                 </ListItemIcon>
 
-                <ListItemText primary={item} sx={{ opacity: open ? 1 : 0 }} />
+                <ListItemText
+                  primary={item.text}
+                  sx={{ opacity: open ? 1 : 0 }}
+                />
               </ListItemButton>
             </Box>
           ))}

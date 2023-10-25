@@ -21,6 +21,7 @@ import RealEstateForSale from "./pages/RealEstate/Sale/Sale.jsx";
 import RealEstateForRent from "./pages/RealEstate/Rent/Rent.jsx";
 import RealEstateProjects from "./pages/RealEstateProjects/RealEstateProjects.jsx";
 import PostingManagement from "./pages/PostingManagement/PostingManagement.jsx";
+import ListPost from "./pages/PostingManagement/ListPost.jsx";
 
 const router = createBrowserRouter([
   {
@@ -47,6 +48,10 @@ const router = createBrowserRouter([
       {
         path: "/quan-ly-dang-tin",
         element: <PostingManagement />,
+      },
+      {
+        path: "/quan-ly-dang-tin/danh-sach",
+        element: <ListPost />,
       },
     ],
   },

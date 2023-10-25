@@ -96,10 +96,13 @@ export default function Dashboard({ children }) {
             {
               text: "Quản lý tin đăng",
               items: [
-                "Đăng mới",
-                "Danh sách tin",
-                "Tin nháp",
-                "Danh sách tin tài trợ",
+                { text: "Đăng mới", link: "/quan-ly-dang-tin" },
+                { text: "Danh sách tin", link: "/quan-ly-dang-tin/danh-sach" },
+                { text: "Tin nháp", link: "Tin nháp" },
+                {
+                  text: "Danh sách tin tài trợ",
+                  link: "Danh sách tin tài trợ",
+                },
               ],
             },
             {
