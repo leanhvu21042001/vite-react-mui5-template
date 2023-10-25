@@ -6,6 +6,7 @@ import MenuItem from "@mui/material/MenuItem";
 import ListIcon from "@mui/icons-material/List";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import { Avatar } from "@mui/material";
+import { Link } from "react-router-dom";
 
 const StyledMenu = styled((props) => (
   <Menu
@@ -88,7 +89,12 @@ export default function HeaderBoxInfo() {
         open={open}
         onClose={handleClose}
       >
-        <MenuItem onClick={handleClose} disableRipple>
+        <MenuItem
+          as={Link}
+          to="/quan-ly-dang-tin"
+          onClick={handleClose}
+          disableRipple
+        >
           <ListIcon />
           Quản lý đăng tin
         </MenuItem>

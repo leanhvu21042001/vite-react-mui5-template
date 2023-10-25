@@ -12,7 +12,7 @@ const RootLayout = () => {
         <header id="root-layout-header">
           <Header />
         </header>
-        <main id="root-layout-main">
+        <main id="root-layout-main" style={{ position: "relative" }}>
           <Outlet />
         </main>
         <footer id="root-layout-footer">

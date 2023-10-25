@@ -20,6 +20,7 @@ import Home from "./pages/Home/Home.jsx";
 import RealEstateForSale from "./pages/RealEstate/Sale/Sale.jsx";
 import RealEstateForRent from "./pages/RealEstate/Rent/Rent.jsx";
 import RealEstateProjects from "./pages/RealEstateProjects/RealEstateProjects.jsx";
+import PostingManagement from "./pages/PostingManagement/PostingManagement.jsx";
 
 const router = createBrowserRouter([
   {
@@ -32,16 +33,20 @@ const router = createBrowserRouter([
         path: "/",
       },
       {
-        path: "sale/:slug",
+        path: "/sale/:slug",
         element: <RealEstateForSale />,
       },
       {
-        path: "rent/:slug",
+        path: "/rent/:slug",
         element: <RealEstateForRent />,
       },
       {
-        path: "project/:slug",
+        path: "/project/:slug",
         element: <RealEstateProjects />,
+      },
+      {
+        path: "/quan-ly-dang-tin",
+        element: <PostingManagement />,
       },
     ],
   },
