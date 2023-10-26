@@ -9,6 +9,7 @@ import RealEstateProjects from "./pages/RealEstateProjects/RealEstateProjects.js
 import PostingManagement from "./pages/PostingManagement/PostingManagement.jsx";
 import ListPost from "./pages/PostingManagement/ListPost.jsx";
 import ListDraftPost from "./pages/PostingManagement/ListDraftPost.jsx";
+import RealEstateDetail from "./pages/RealEstateDetail/RealEstateDetail.jsx";
 
 const router = createBrowserRouter([
   {
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
       {
         path: "/project/:slug",
         element: <RealEstateProjects />,
+      },
+      {
+        path: "/detail/:slug",
+        element: <RealEstateDetail />,
       },
       {
         path: "/quan-ly-dang-tin",
