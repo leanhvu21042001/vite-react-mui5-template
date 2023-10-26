@@ -61,7 +61,7 @@ const Drawer = styled(MuiDrawer, {
 }));
 
 export default function Dashboard({ children }) {
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = React.useState(true);
 
   const toggleDrawer = () => {
     setOpen((prev) => !prev);
@@ -98,7 +98,7 @@ export default function Dashboard({ children }) {
               items: [
                 { text: "Đăng mới", link: "/quan-ly-dang-tin" },
                 { text: "Danh sách tin", link: "/quan-ly-dang-tin/danh-sach" },
-                { text: "Tin nháp", link: "Tin nháp" },
+                { text: "Tin nháp", link: "/quan-ly-dang-tin/danh-sach-nhap" },
                 {
                   text: "Danh sách tin tài trợ",
                   link: "Danh sách tin tài trợ",
