@@ -16,13 +16,17 @@ import BathtubOutlinedIcon from "@mui/icons-material/BathtubOutlined";
 import AccountCircleOutlined from "@mui/icons-material/AccountCircleOutlined";
 import PhoneAndroidOutlined from "@mui/icons-material/PhoneAndroidOutlined";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+import { Link } from "react-router-dom";
 
 const RealEstateCard = () => {
   return (
     <Card
+      component={Link}
+      to="/detail/Bán%20căn%20hộ%20Q7%20Riverside%20giá%20tốt"
       sx={{
         boxShadow: "0px 4px 6px 0px rgba(44,44,44,0.04)",
         border: "1px solid #F2F2F2",
+        textDecoration: "none",
       }}
     >
       <Grid container xs={12}>
